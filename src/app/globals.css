@@ -34,6 +34,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background: #ffffff;
   font-family: 'creato-display', sans-serif !important;
+  color: var(--textDark);
 }
 
 h1 {
