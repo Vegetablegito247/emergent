@@ -16,18 +16,63 @@
   }
 }
 
+@font-face {
+  font-family: 'creato-display';
+  src: url('../../public/creato-display/CreatoDisplay-Light.otf');
+}
+
+@font-face {
+  font-family: 'creato-bold';
+  src: url('../../public/creato-display/CreatoDisplay-Bold.otf');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #ffffff;
+  font-family: 'creato-display', sans-serif !important;
+}
+
+h1 {
+  font-family: 'creato-bold', sans-serif !important;
+
+}
+
+.stroke {
+  position: relative;
+  z-index: 2;
+}
+
+.stroke::before {
+  content: 'Enhance your online presence through our digital solutions !';
+  font-weight: bold;
+  font-size: inherit;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+}
+
+@layer base {
+  :root {
+    --accent: rgba(46, 65, 218, 1);
+    --textWhite: rgb(255, 255, 255);
+    --textDark: rgb(0, 0, 0);
+    --sectionBg: rgba(252, 244, 229, 1);
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .service_txt {
+    background: linear-gradient(99.38deg, rgba(0, 0, 0, 0.35) 87.84%, rgba(0, 0, 0, 0.08) 97.45%);
   }
 }
