@@ -96,8 +96,8 @@ function LandMain() {
             <section className='px-[30px] md:px-[3rem] py-[4rem] lmd:px-[4rem] w-full' id=''>
                 <div className="motto">
                     <div className="motto_title">
-                        <h1 data-aos="fade-up-left" className='text-[35px] sm:text-[45px] font-bold w-full md:w-[600px]'>"The best brands are the ones that tell a story"</h1>
-                        <p data-aos="fade-up-left">~Jeff Bezos</p>
+                        <h1 data-aos="fade-up-right" className='text-[35px] sm:text-[45px] font-bold w-full md:w-[600px]'>"The best brands are the ones that tell a story"</h1>
+                        <p data-aos="fade-up-right">~Jeff Bezos</p>
                     </div>
                 </div>
             </section>
