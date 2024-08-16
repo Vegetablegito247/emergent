@@ -24,10 +24,10 @@ function Footer() {
                     </Link>
                 </div>
                 <div className="nav_logo">
-                    <Image className='w-[200px] h-[40px] object-cover' src={logo} alt='' />
+                    <Image className='w-[200px] h-[40px] object-cover mr-[-35px] lmd:mr-0' src={logo} alt='' />
                 </div>
             </div>
-            <Image className='h-[18%] w-[150px] md:w-[15%] absolute bottom-0 left-0' src={footer} alt='' />
+            <Image className='h-[18%] w-[150px] md:w-[15%] absolute bottom-0 left-0 ' src={footer} alt='' />
         </footer>
     )
 }

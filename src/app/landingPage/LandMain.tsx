@@ -9,7 +9,7 @@ import 'animate.css';
 
 function LandMain() {
     return (
-        <main>
+        <main className='overflow-hidden'>
             <section className='px-[30px] md:px-[3rem] lmd:p-[4rem] py-[4rem] w-full' id='about'>
                 <div className="about flex items-center flex-col-reverse md:flex-row gap-8 md:gap-0">
                     <div className="abt_txt w-full md:w-[50%] flex flex-col gap-4">
@@ -25,7 +25,7 @@ function LandMain() {
                         </Link>
                     </div>
                     <div className="abt_img w-full md:w-[50%] flex flex-col items-center justify-center">
-                        <Image className='w-[200px] h-[200px] animate__animated animate__bounce animate__slower animate__infinite	infinite' src={abt} alt='' />
+                        <Image className='w-[200px] h-[200px] animate__animated animate__bounce animate__slower animate__infinite infinite' src={abt} alt='' />
                         <Image className='w-[200px]' src={hole} alt='' />
                     </div>
                 </div>

@@ -51,7 +51,7 @@ function Navbar() {
                 </Link>
             </div>
             <div className="nav_logo w-full lmd:w-auto h-[70px] lmd:h-auto flex flex-row-reverse items-center justify-between px-6 lmd:px-0">
-                <Image className='w-[200px] h-[40px] object-cover' src={logo} alt='' />
+                <Image className='w-[200px] h-[40px] object-cover mr-[-35px] lmd:mr-0' src={logo} alt='' />
                 <div onClick={handleSidemenu} className='lmd:hidden flex items-center justify-center w-[35px] h-[35px] text-[16px] md:text-base border-[1px] text-accent'>
                 <GiHamburgerMenu />
             </div>
