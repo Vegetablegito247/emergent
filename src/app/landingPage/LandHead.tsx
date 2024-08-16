@@ -8,7 +8,7 @@ import bgArr from '../../assets/landPage/bgHeadArr.png';
 
 function LandHead() {
     return (
-        <header className='h-[70vh] lmd:h-[100vh] w-[100%] flex md:justify-center lmd:justify-normal px-[30px] md:px-[3rem] lmd:px-[4rem] flex-col lmd:flex-row relative bg-accent overflow-hidden'>
+        <header className='h-[80vh] lmd:h-[100vh] w-[100%] flex md:justify-center lmd:justify-normal px-[30px] md:px-[3rem] lmd:px-[4rem] flex-col lmd:flex-row relative bg-accent overflow-hidden'>
             <div className='w-full lmd:w-[60%] mt-6'>
                 <h1 className='stroke font-bold text-[45px] xsm:text-[50px] sm:text-[70px] leading-normal sm:leading-[80px] text-light'>
                     Enhance your online presence through our digital solutions !
