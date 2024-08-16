@@ -34,19 +34,19 @@ function Navbar() {
                 <div onClick={handleSidemenu} className='lmd:hidden flex items-center justify-center w-[35px] h-[35px] text-[16px] md:text-base border-[1px] text-light ml-auto'>
                     <FaXmark />
                 </div>
-                <Link href='#about' className=''>
+                <Link onClick={handleSidemenu} href='#about' className=''>
                     <span>About</span>
                 </Link>
-                <Link href='#service' className=''>
+                <Link onClick={handleSidemenu} href='#service' className=''>
                     <span>Services</span>
                 </Link>
-                <Link href='#client' className=''>
+                <Link onClick={handleSidemenu} href='#client' className=''>
                     <span>Client Process</span>
                 </Link>
-                <Link href='#consultation' className=''>
+                <Link onClick={handleSidemenu} href='#consultation' className=''>
                     <span>Consultation</span>
                 </Link>
-                <Link href='#contact' className=''>
+                <Link onClick={handleSidemenu} href='#contact' className=''>
                     <span>Contact us</span>
                 </Link>
             </div>
