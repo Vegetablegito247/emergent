@@ -9,7 +9,7 @@ import 'animate.css';
 
 function LandMain() {
     return (
-        <main className='overflow-hidden'>
+        <main className='overflow-x-hidden'>
             <section className='px-[30px] md:px-[3rem] lmd:p-[4rem] py-[4rem] w-full' id='about'>
                 <div className="about flex items-center flex-col-reverse md:flex-row gap-8 md:gap-0">
                     <div className="abt_txt w-full md:w-[50%] flex flex-col gap-4">

@@ -15,7 +15,7 @@ function Navbar() {
     };
 
     return (
-        <nav className='w-full h-fit lmd:h-[100px] flex items-center justify-between flex-col-reverse lmd:flex-row lmd px-0 lmd:px-[4rem] sticky top-0 left-0 bg-light z-10'>
+        <nav className='w-full h-fit lmd:h-[100px] flex items-center justify-between flex-col-reverse lmd:flex-row lmd px-0 lmd:px-[4rem] sticky top-0 left-0 bg-light z-10 overflow-hidden'>
             <div className="nav_socials hidden md:flex items-center justify-center gap-3 p-5 lmd:p-0 bg-accent lmd:bg-transparent w-full lmd:w-fit text-light lmd:text-dark">
                 <Link href='' className='flex items-center justify-center w-[35px] h-[35px] text-[16px] md:text-base rounded-full border-[1px]'>
                     <FaInstagram />
