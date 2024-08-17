@@ -36,7 +36,7 @@ function LandMain() {
                     <div className="service_head mb-[2rem] text-center">
                         <h3 className='text-accent font-semibold text-[20px]'>Our Services</h3>
                     </div>
-                    <div className="services_list grid md:grid-cols-2 gap-8">
+                    <div className="services_list grid md:grid-cols-2 gap-10">
                         {
                             services.map((serv, ind) => (
                                 <div data-aos={`fade-${ind % 2 == 0 ? 'right' : 'left'}`} key={serv.id} style={{ boxShadow: `20px 15px 0 ${serv.shadow}` }} className="service_item rounded-[30px] relative overflow-hidden">
