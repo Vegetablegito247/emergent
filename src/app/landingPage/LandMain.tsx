@@ -14,7 +14,7 @@ function LandMain() {
                 <div className="about flex items-center flex-col-reverse md:flex-row gap-8 md:gap-0">
                     <div className="abt_txt w-full md:w-[50%] flex flex-col gap-4">
                         <h3 className='text-accent font-semibold text-[20px]' data-aos='fade-down'>About us</h3>
-                        <h1 data-aos='fade-down' className='text-[45px] font-bold'>
+                        <h1 data-aos='fade-down' className='text-[45px] font-normal'>
                             Transforming ideas into visually stunning realities
                         </h1>
                         <p data-aos='fade-down'>
@@ -85,7 +85,7 @@ function LandMain() {
                     </div>
                     <div data-aos="fade-up-right" className="spot_txt">
                         <h3 data-aos='fade-down' data-aos-delay='100' className='font-semibold text-[20px]'>Reserve your spot...</h3>
-                        <h1 data-aos='fade-down' data-aos-delay='100' className='text-[35px] sm:text-[45px] font-bold'>Schedule a consultation call with us today.</h1>
+                        <h1 data-aos='fade-down' data-aos-delay='100' className='text-[35px] sm:text-[45px] font-normal'>Schedule a consultation call with us today.</h1>
                         <Link data-aos='fade-down' data-aos-delay='100' href='' className='w-fit py-2 px-4 rounded-[30px] bg-accent text-light border-[1px] border-dark block mt-6'>
                             Schedule Consultation
                         </Link>
@@ -96,7 +96,7 @@ function LandMain() {
             <section className='px-[30px] md:px-[3rem] py-[4rem] lmd:px-[4rem] w-full' id=''>
                 <div className="motto">
                     <div className="motto_title">
-                        <h1 data-aos="fade-up-right" className='text-[35px] sm:text-[45px] font-bold w-full md:w-[600px]'>"The best brands are the ones that tell a story"</h1>
+                        <h1 data-aos="fade-up-right" className='text-[35px] sm:text-[45px] font-normal w-full md:w-[600px]'>"The best brands are the ones that tell a story"</h1>
                         <p data-aos="fade-up-right">~Jeff Bezos</p>
                     </div>
                 </div>
@@ -108,7 +108,7 @@ function LandMain() {
                         <h3 data-aos='fade-down' className='text-accent font-semibold text-[20px]'>Contact us</h3>
                     </div>
                     <div className="contact_form">
-                        <h1 data-aos='fade-down' className='text-[40px] font-bold w-full md:w-[600px] mx-auto text-center text-slate-500'>
+                        <h1 data-aos='fade-down' className='text-[40px] font-normal w-full md:w-[600px] mx-auto text-center text-slate-500'>
                             Want to make a bigger impact online ? We're your partners in digital success. <span className='text-slate-900'>Let's create a winning strategy together.</span>
                         </h1>
                         <form action="" className='w-full md:w-[600px] mx-0 md:mx-auto mt-8'>
