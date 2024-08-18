@@ -11,7 +11,7 @@ function LandHead() {
     return (
         <header className='h-fit lmd:h-[100vh] w-[100%] flex md:items-center gap-6 justify-between px-[30px] md:px-[3rem] lmd:px-[4rem] pb-[7rem] lmd:pb-0 flex-col lmd:flex-row relative bg-accent overflow-hidden'>
             <div className='w-full lmd:w-[50%] mt-6'>
-                <h1 className='stroke font-bold text-[45px] xsm:text-[50px] sm:text-[70px] leading-normal sm:leading-[80px] text-light'>
+                <h1 className='stroke font-bold text-[30px] xsm:text-[50px] sm:text-[70px] leading-normal sm:leading-[80px] text-light'>
                     Enhance your online presence through our digital solutions !
                 </h1>
                 <Link href='' className='w-fit py-2 px-4 rounded-[30px] bg-light border-[1px] border-dark mt-6 block'>
