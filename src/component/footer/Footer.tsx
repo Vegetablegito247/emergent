@@ -10,16 +10,10 @@ function Footer() {
         <footer className='px-[30px] md:px-[3rem] py-[4rem] lmd:px-[4rem] w-full relative'>
             <div className="foot flex justify-between items-center py-[30px] border-t-2">
                 <div className="nav_socials flex items-center gap-3">
-                    <Link href='' className='flex items-center justify-center w-[35px] h-[35px] rounded-full border-[1px]'>
+                    <Link href='https://www.instagram.com/emergentcreatives?igsh=cXRqNmY2Z2YxbWxs' className='flex items-center justify-center w-[35px] h-[35px] rounded-full border-[1px]'>
                         <FaInstagram />
                     </Link>
-                    <Link href='' className='flex items-center justify-center w-[35px] h-[35px] rounded-full border-[1px]'>
-                        <FaTwitter />
-                    </Link>
-                    <Link href='' className='flex items-center justify-center w-[35px] h-[35px] rounded-full border-[1px]'>
-                        <FaFacebookF />
-                    </Link>
-                    <Link href='' className='flex items-center justify-center w-[35px] h-[35px] rounded-full border-[1px]'>
+                    <Link href='https://www.linkedin.com/company/emergent-creatives-' className='flex items-center justify-center w-[35px] h-[35px] rounded-full border-[1px]'>
                         <FaLinkedin />
                     </Link>
                 </div>
