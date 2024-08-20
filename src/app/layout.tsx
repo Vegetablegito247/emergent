@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Emergent Creatives",
   description: "Emergent Creatives is a digital agency that helps small and medium-sized businesses, as well as nonprofits, enhance their online presence through effective digital solutions. We offer a comprehensive range of digital solutions designed to boost visibility and reach a wider audience.",
   icons: {
-    icon: './logo.png'
+    icon: '../../public/logo.png'
   }
 };
 
