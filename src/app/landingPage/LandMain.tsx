@@ -1,13 +1,84 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
 import abt from '../../assets/landPage/abt.png';
 import hole from '../../assets/landPage/hole.png';
 import { client, services } from '@/data/data';
 import contact from '../../assets/landPage/contact.png';
 import 'animate.css';
+import { AppDispatch } from '@/store/store';
+import { useDispatch } from 'react-redux';
+import { sendMsg } from '@/store/sendEmail';
+import { toast } from 'react-toastify';
+
+interface UserData {
+    name: string;
+    email: string;
+    message: string;
+};
 
 function LandMain() {
+    const dispatch: AppDispatch = useDispatch();
+    const [userMsg, setUserMsg] = useState<UserData>({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const [error, setError] = useState<{ [key: string]: string }>({});
+
+    const validateForm = () => {
+        const newErrors: { [key: string]: string } = {};
+
+        if (!userMsg.name.trim()) {
+            newErrors.name = 'Full name is required';
+        }
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(userMsg.email.trim())) {
+            newErrors.email = 'Invalid email address';
+        }
+        else if (!userMsg.email.trim()) {
+            newErrors.email = 'Email account is required';
+        }
+        if (!userMsg.message.trim()) {
+            newErrors.msg = 'This field is required';
+        }
+
+        setError(newErrors);
+        return Object.keys(newErrors).length === 0;
+    }
+
+    const handleEmail = async (e: FormEvent) => {
+        e.preventDefault();
+
+        if (validateForm()) {
+            try {
+                const response = await dispatch(sendMsg(userMsg))
+                if (sendMsg.fulfilled.match(response)) {
+                    toast.success(response.payload);
+
+                    setUserMsg({
+                        name: '',
+                        email: '',
+                        message: ''
+                    });
+                } else {
+                    toast.error(response.error.message);
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    };
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement | any>) => {
+        const { name, value } = e.target;
+        setUserMsg({
+            ...userMsg,
+            [name]: value
+        });
+    };
+
     return (
         <main className='overflow-x-hidden'>
             <section className='px-[30px] md:px-[3rem] lmd:p-[4rem] py-[4rem] w-full' id='about'>
@@ -20,7 +91,7 @@ function LandMain() {
                         <p data-aos='fade-down'>
                             Emergent Creatives is a digital agency that helps small and medium-sized businesses, as well as nonprofits, enhance their online presence through effective digital solutions. We offer a comprehensive range of digital solutions designed to boost visibility and reach a wider audience.
                         </p>
-                        <Link data-aos='fade-down' href='' className='w-fit py-2 px-4 rounded-[30px] bg-light border-[1px] border-dark block mt-3'>
+                        <Link data-aos='fade-down' href='#contact' className='w-fit py-2 px-4 rounded-[30px] bg-light border-[1px] border-dark block mt-3'>
                             Contact us
                         </Link>
                     </div>
@@ -86,7 +157,7 @@ function LandMain() {
                     <div data-aos="fade-up-right" className="spot_txt">
                         <h3 data-aos='fade-down' data-aos-delay='100' className='font-semibold text-[20px]'>Reserve your spot...</h3>
                         <h1 data-aos='fade-down' data-aos-delay='100' className='text-[35px] sm:text-[45px] font-normal'>Schedule a consultation call with us today.</h1>
-                        <Link data-aos='fade-down' data-aos-delay='100' href='' className='w-fit py-2 px-4 rounded-[30px] bg-accent text-light border-[1px] border-dark block mt-6'>
+                        <Link data-aos='fade-down' data-aos-delay='100' href='https://calendar.app.google/LLZdqomnM2fG5Zss6' className='w-fit py-2 px-4 rounded-[30px] bg-accent text-light border-[1px] border-dark block mt-6'>
                             Schedule Consultation
                         </Link>
                     </div>
@@ -111,20 +182,43 @@ function LandMain() {
                         <h1 data-aos='fade-down' className='text-[40px] font-normal w-full md:w-[600px] mx-auto text-center text-slate-500'>
                             Want to make a bigger impact online ? We're your partners in digital success. <span className='text-slate-900'>Let's create a winning strategy together.</span>
                         </h1>
-                        <form action="" className='w-full md:w-[600px] mx-0 md:mx-auto mt-8'>
+                        <form onSubmit={handleEmail} action="" className='w-full md:w-[600px] mx-0 md:mx-auto mt-8'>
                             <div className="frm_inp w-full grid gap-5">
-                                <div data-aos='fade-down' className="inp_crl w-full">
-                                    <input type="text" className='w-full h-[40px] border-b-2 outline-none px-2' placeholder='Full name' />
+                                <div data-aos='fade-down' className="inp_crl w-full grid">
+                                    <input
+                                        type="text"
+                                        name='name'
+                                        value={userMsg.name}
+                                        className='w-full h-[40px] border-b-2 outline-none px-2'
+                                        placeholder='Full name'
+                                        onChange={handleChange}
+                                    />
+                                    {error.name && <span className="err_msg text-red-500 text-[10px]">{error.name}</span>}
                                 </div>
-                                <div data-aos='fade-down' className="inp_crl w-full">
-                                    <input type="text" className='w-full h-[40px] border-b-2 outline-none px-2' placeholder='Email address' />
+                                <div data-aos='fade-down' className="inp_crl w-full grid">
+                                    <input
+                                        type="text"
+                                        name='email'
+                                        value={userMsg.email}
+                                        className='w-full h-[40px] border-b-2 outline-none px-2'
+                                        placeholder='Email address'
+                                        onChange={handleChange}
+                                    />
+                                    {error.email && <span className="err_msg text-red-500 text-[10px]">{error.email}</span>}
                                 </div>
-                                <div data-aos='fade-down' className="inp_crl w-full">
-                                    <textarea className='w-full h-[40px] border-b-2 outline-none px-2' placeholder='Tell us about your project' />
+                                <div data-aos='fade-down' className="inp_crl w-full grid">
+                                    <textarea
+                                        className='w-full h-[40px] border-b-2 outline-none px-2'
+                                        placeholder='Tell us about your project'
+                                        name='message'
+                                        value={userMsg.message}
+                                        onChange={handleChange}
+                                    />
+                                    {error.msg && <span className="err_msg text-red-500 text-[10px]">{error.msg}</span>}
                                 </div>
                             </div>
                             <div className="frm_btn">
-                                <button data-aos='fade-down' className='w-fit py-2 px-4 rounded-[30px] bg-light border-[1px] border-dark block mt-8 ml-auto'>Send Message</button>
+                                <button type='submit' data-aos='fade-down' className='w-fit py-2 px-4 rounded-[30px] bg-light border-[1px] border-dark block mt-8 ml-auto'>Send Message</button>
                             </div>
                         </form>
                     </div>

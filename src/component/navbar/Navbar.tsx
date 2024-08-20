@@ -20,7 +20,7 @@ function Navbar() {
             <Link href='https://www.instagram.com/emergentcreatives?igsh=cXRqNmY2Z2YxbWxs' className='flex items-center justify-center w-[35px] h-[35px] rounded-full border-[1px]'>
                         <FaInstagram />
                     </Link>
-                    <Link href='https://www.linkedin.com/company/emergent-creatives-' className='flex items-center justify-center w-[35px] h-[35px] rounded-full border-[1px]'>
+                    <Link href='https://www.linkedin.com/company/emergent-creatives/' className='flex items-center justify-center w-[35px] h-[35px] rounded-full border-[1px]'>
                         <FaLinkedin />
                     </Link>
             </div>

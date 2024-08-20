@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../assets/nav/logo.png';
-import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import footer from '../../assets/nav/footer.png';
 
 function Footer() {
@@ -13,7 +13,7 @@ function Footer() {
                     <Link href='https://www.instagram.com/emergentcreatives?igsh=cXRqNmY2Z2YxbWxs' className='flex items-center justify-center w-[35px] h-[35px] rounded-full border-[1px]'>
                         <FaInstagram />
                     </Link>
-                    <Link href='https://www.linkedin.com/company/emergent-creatives-' className='flex items-center justify-center w-[35px] h-[35px] rounded-full border-[1px]'>
+                    <Link href='https://www.linkedin.com/company/emergent-creatives/' className='flex items-center justify-center w-[35px] h-[35px] rounded-full border-[1px]'>
                         <FaLinkedin />
                     </Link>
                 </div>

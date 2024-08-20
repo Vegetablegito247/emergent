@@ -7,6 +7,8 @@ import LandMain from "./landingPage/LandMain";
 import Footer from "@/component/footer/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
   useEffect(() => {
@@ -22,6 +24,7 @@ export default function Home() {
       <LandHead />
       <LandMain />
       <Footer />
+      <ToastContainer />
     </>
   );
 }
