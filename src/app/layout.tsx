@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import dynamic from "next/dynamic";
-import Head from "next/head";
 
 const StoreProvider = dynamic(() => import("@/store/StoreProvider"), { ssr: false });
 
