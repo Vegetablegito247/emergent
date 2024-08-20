@@ -88,7 +88,7 @@ function LandMain() {
                         <h1 data-aos='fade-down' className='text-[45px] leading-[45px] sm:leading-normal font-normal'>
                             Transforming ideas into visually stunning realities
                         </h1>
-                        <p data-aos='fade-down' className='text-[18px]'>
+                        <p data-aos='fade-down' className='text-[18px] text-justify sm:text-start'>
                             Emergent Creatives is a digital agency that helps small and medium-sized businesses, as well as nonprofits, enhance their online presence through effective digital solutions. We offer a comprehensive range of digital solutions designed to boost visibility and reach a wider audience.
                         </p>
                         <Link data-aos='fade-down' href='#contact' className='w-fit py-2 px-4 rounded-[30px] bg-light border-[1px] border-dark block mt-3'>
@@ -180,7 +180,7 @@ function LandMain() {
                     </div>
                     <div className="contact_form">
                         <h1 data-aos='fade-down' className='text-[40px] leading-[45px] sm:leading-normal font-normal w-full md:w-[600px] mx-auto text-center text-slate-500'>
-                            Want to make a bigger impact online ? We're your partners in digital success. <span className='text-slate-900'>Let's create a winning strategy together.</span>
+                            Want to make a bigger impact online? <span className='text-logo'>Let's create a winning strategy together!</span>
                         </h1>
                         <form onSubmit={handleEmail} action="" className='w-full md:w-[600px] mx-0 md:mx-auto mt-8'>
                             <div className="frm_inp w-full grid gap-5">

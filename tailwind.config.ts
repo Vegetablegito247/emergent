@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         accent: 'var(--accent)',
+        logo: 'var(--textGreen)',
         light: 'var(--textWhite)',
         dark: 'var(--textDark)',
         section: 'var(--sectionBg)',

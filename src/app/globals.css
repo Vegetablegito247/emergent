@@ -43,7 +43,7 @@ body {
   z-index: 2;
 }
 
-.stroke::before {
+/* .stroke::before {
   content: 'Enhance your online presence through our digital solutions !';
   font-weight: bold;
   font-size: inherit;
@@ -53,13 +53,14 @@ body {
   position: absolute;
   bottom: 2px;
   left: 2px;
-}
+} */
 
 @layer base {
   :root {
     --accent: rgba(46, 65, 218, 1);
     --textWhite: rgb(255, 255, 255);
     --textDark: rgb(0, 0, 0);
+    --textGreen: hsl(174, 61%, 55%);
     --sectionBg: rgba(252, 244, 229, 1);
   }
 }
