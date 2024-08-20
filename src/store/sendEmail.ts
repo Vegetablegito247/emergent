@@ -9,7 +9,7 @@ interface UserData {
 
 export const sendMsg = createAsyncThunk('Email/sendEmail', async (mailMsg: UserData) => {
     try {
-        const response = await axios.post('http://localhost:5000/sendEmail', mailMsg);
+        const response = await axios.post('https://emergent-server.vercel.app/sendEmail', mailMsg);
 
         return response.data;
     }
