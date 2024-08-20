@@ -14,7 +14,7 @@ function LandHead() {
                 <h1 className='stroke font-bold text-[30px] xsm:text-[50px] sm:text-[70px] leading-normal sm:leading-[80px] text-light'>
                     Enhance your online presence through our digital solutions !
                 </h1>
-                <Link href='' className='w-fit py-2 px-4 rounded-[30px] bg-light border-[1px] border-dark mt-6 block'>
+                <Link href='#contact' className='w-fit py-2 px-4 rounded-[30px] bg-light border-[1px] border-dark mt-6 block'>
                     Contact us
                 </Link>
             </div>
