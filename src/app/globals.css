@@ -16,7 +16,7 @@
   }
 }
 
-@font-face {
+/* @font-face {
   font-family: 'creato-display';
   src: url('../../public/creato-display/CreatoDisplay-Light.otf');
 }
@@ -24,7 +24,7 @@
 @font-face {
   font-family: 'creato-bold';
   src: url('../../public/creato-display/CreatoDisplay-Regular.otf');
-}
+} */
 
 html {
   scroll-behavior: smooth;
@@ -33,14 +33,10 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
   background: #ffffff;
-  font-family: 'creato-display', sans-serif !important;
+  font-family: 'Times New Roman', Times, serif !important;
   color: var(--textDark);
 }
 
-h1 {
-  font-family: 'creato-bold', sans-serif !important;
-
-}
 
 .stroke {
   position: relative;
