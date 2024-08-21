@@ -34,14 +34,16 @@ function LandMain() {
             newErrors.name = 'Full name is required';
         }
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        if (!emailPattern.test(userMsg.email.trim())) {
-            newErrors.email = 'Invalid email address';
-        }
-        else if (!userMsg.email.trim()) {
+        if (!userMsg.email.trim()) {
             newErrors.email = 'Email account is required';
         }
+        else {
+            if (!emailPattern.test(userMsg.email.trim())) {
+                newErrors.email = 'Invalid email address';
+            }
+        }
         if (!userMsg.message.trim()) {
-            newErrors.msg = 'This field is required';
+            newErrors.message = 'This field is required';
         }
 
         setError(newErrors);
@@ -53,6 +55,7 @@ function LandMain() {
 
         if (validateForm()) {
             try {
+                const updatedMsg = { ...userMsg, message: `${userMsg.message} -${userMsg.email}` }
                 const response = await dispatch(sendMsg(userMsg))
                 if (sendMsg.fulfilled.match(response)) {
                     toast.success(response.payload);
@@ -88,7 +91,7 @@ function LandMain() {
                         <h1 data-aos='fade-down' className='text-[45px] leading-[45px] sm:leading-normal font-normal'>
                             Transforming ideas into visually stunning realities
                         </h1>
-                        <p data-aos='fade-down' className='text-[18px] text-justify sm:text-start'>
+                        <p data-aos='fade-down' className='text-[18px] text-justify sm:text-start text-'>
                             Emergent Creatives is a digital agency that helps small and medium-sized businesses, as well as nonprofits, enhance their online presence through effective digital solutions. We offer a comprehensive range of digital solutions designed to boost visibility and reach a wider audience.
                         </p>
                         <Link data-aos='fade-down' href='#contact' className='w-fit py-2 px-4 rounded-[30px] bg-light border-[1px] border-dark block mt-3'>
@@ -214,7 +217,7 @@ function LandMain() {
                                         value={userMsg.message}
                                         onChange={handleChange}
                                     />
-                                    {error.msg && <span className="err_msg text-red-500 text-[10px]">{error.msg}</span>}
+                                    {error.msg && <span className="err_msg text-red-500 text-[10px]">{error.message}</span>}
                                 </div>
                             </div>
                             <div className="frm_btn">
