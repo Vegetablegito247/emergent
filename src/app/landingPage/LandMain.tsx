@@ -55,7 +55,7 @@ function LandMain() {
 
         if (validateForm()) {
             try {
-                const updatedMsg = { ...userMsg, message: `${userMsg.message} \n-${userMsg.email}` }
+                const updatedMsg = { ...userMsg, message: `${userMsg.message} \n\n-${userMsg.email}` }
                 const response = await dispatch(sendMsg(updatedMsg))
                 if (sendMsg.fulfilled.match(response)) {
                     toast.success(response.payload);
