@@ -59,7 +59,7 @@ export const client: Client[] = [
     {
         id: 2,
         title: 'Project Design Brief',
-        description: 'Based on the consultation, we develop a detailed project outline outlining the scope, objectives, and deliverables.',
+        description: 'Based on the consultation, we develop a detailed project brief outlining the scope, objectives, and deliverables.',
         shadow: 'rgba(219, 46, 152, 1)'
     },
     {
